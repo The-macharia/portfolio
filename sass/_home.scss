@@ -1,0 +1,187 @@
+.container{
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+/**********navigation****************/
+.navigation{
+    //background-color: aqua;
+    color: white;
+
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        padding: 3rem;
+    }
+    &__item{
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+
+    &__link:link,
+    &__link:visited{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $color-white-dark;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 2rem;
+        transition: all .5s;
+        background-image: linear-gradient(120deg, transparent 0%,   transparent 50%, $color-white 50%);
+        background-size: 230%;
+
+        &:hover{
+            background-position: 100%;
+            color: $color-primary;
+            transform: scale(1.1);
+            box-shadow: 0 1rem 3rem rgba($color-black, .5);
+        }
+
+        &:active{
+            transform: translateY(5px);
+        }
+    }
+    &:hover &__link:not(:hover){
+        transform: scale(.8);
+    }
+}
+
+
+
+/**********text box****************/
+.text-box{
+    //background-color: white;
+    flex: 0 0 50%;
+    align-self: center;
+
+    &__text{
+        color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        //background-color: grey;
+        height: 50%; 
+        transition: all .3s;
+
+        &--main{      
+            font-family: "latto", sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            text-align: center;      
+            animation: moveInLeft 4s;
+        }
+
+        &--sub{   
+            font-family: "latto", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            text-align: center;
+            animation: moveInRight 3s;
+
+            background-image: linear-gradient(to top, $color-white, $color-black);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    &__location{
+        //background-color: greenyellow;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    &__location-icon{
+        width: 3rem;
+        height: 3rem;
+        fill: $color-primary;
+        border-radius: 50%; 
+        margin-bottom: 2rem;
+
+        transition: all 1s;
+        animation: pulsate 1s 6s infinite;
+    }
+    
+    &__location-text{
+        font-size: 2rem;
+        text-transform: capitalize;
+
+        &:hover{
+            transform: scale(1.1) skewY(-2deg);
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+        }
+    }
+}
+
+
+
+/**********social****************/
+.social{
+    //background-color: orangered;
+
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    
+    &__item{
+        text-transform: capitalize;
+    }
+    &__link:link,
+    &__link:visited{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: transparent;
+        background-image: linear-gradient(to right, $color-white, $color-black);
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .4s;
+
+        &:hover{
+            transform: scale(1.1) translateY(-2px);
+            text-shadow: 0 2rem 4rem $color-white;
+        }  
+        
+        &:active{
+            transform: translateY(5px);
+        } 
+    }
+
+    &:hover &__link:not(:hover){
+        transform: scale(.7);
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+        fill: $color-black-light;
+    }
+
+    &__text{
+        margin-top: .7rem;
+    }
+}
