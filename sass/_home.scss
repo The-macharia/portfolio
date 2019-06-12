@@ -42,7 +42,7 @@
             background-position: 100%;
             color: $color-primary;
             transform: scale(1.1);
-            box-shadow: 0 1rem 3rem rgba($color-black, .5);
+            box-shadow: 0 1rem 3rem rgba($color-white-dark, .3);
         }
 
         &:active{
@@ -80,6 +80,11 @@
             letter-spacing: 2rem;
             text-align: center;      
             animation: moveInLeft 4s;
+
+            background-image: linear-gradient(to bottom, $color-white, $color-black);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         &--sub{   
@@ -122,10 +127,11 @@
     &__location-text{
         font-size: 2rem;
         text-transform: capitalize;
+        color: $color-white-dark;
 
         &:hover{
             transform: scale(1.1) skewY(-2deg);
-            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            box-shadow: 0 1rem 2rem rgba($color-white-dark, .4);
 
         }
     }

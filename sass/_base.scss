@@ -29,10 +29,11 @@ html{
 body{
     box-sizing: border-box;
     font-family: sans-serif;
-    background-image: radial-gradient(rgba(#000033, .4), rgba(#000066, .9));
-    background-size: cover;
+    //background-image: radial-gradient(rgba(#000033, .4), rgba(#000066, .9));
+    //background-size: cover;
     line-height: 1.6;
     font-weight: 400;
+    background-color: rgba($color-black, .95);
 
     min-height: 100vh;
     //background-image: radial-gradient(rgba(#003333, .4), rgba(#003366, .9));

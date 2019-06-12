@@ -13,10 +13,9 @@ html {
 body {
   box-sizing: border-box;
   font-family: sans-serif;
-  background-image: radial-gradient(rgba(0, 0, 51, 0.4), rgba(0, 0, 102, 0.9));
-  background-size: cover;
   line-height: 1.6;
   font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.95);
   min-height: 100vh; }
 
 ::selection {
@@ -88,7 +87,7 @@ body {
       background-position: 100%;
       color: #4d4d4d;
       transform: scale(1.1);
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 1rem 3rem rgba(128, 128, 128, 0.3); }
     .navigation__link:link:active, .navigation__link:visited:active {
       transform: translateY(5px); }
   .navigation:hover .navigation__link:not(:hover) {
@@ -113,7 +112,11 @@ body {
       text-transform: uppercase;
       letter-spacing: 2rem;
       text-align: center;
-      animation: moveInLeft 4s; }
+      animation: moveInLeft 4s;
+      background-image: linear-gradient(to bottom, #f2f2f2, #000);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; }
     .text-box__text--sub {
       font-family: "latto", sans-serif;
       font-size: 1.8rem;
@@ -143,10 +146,11 @@ body {
     animation: pulsate 1s 6s infinite; }
   .text-box__location-text {
     font-size: 2rem;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    color: #808080; }
     .text-box__location-text:hover {
       transform: scale(1.1) skewY(-2deg);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+      box-shadow: 0 1rem 2rem rgba(128, 128, 128, 0.4); }
 
 /**********social****************/
 .social__list {
