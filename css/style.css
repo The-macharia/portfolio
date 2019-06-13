@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   min-height: 100vh;
-  background-image: linear-gradient(to right, rgba(0, 4, 40, 0.6), rgba(0, 78, 146, 0.71)), url(../img/hills7.jpg);
+  background-image: linear-gradient(to right, rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 0.9)), url(../img/hills7.jpg);
   background-size: cover;
   background-position: center; }
 
