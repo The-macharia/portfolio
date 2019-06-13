@@ -5,7 +5,14 @@ $color-white:  #f2f2f2;
 $color-white-dark: #808080;
 $color-black: #000;
 $color-black-light: #000033;
-$color-blue-light: #000066;
+
+
+$color-greyish:#95A5A6;
+//frost color gradient
+$color-frosty1:#000428;
+$color-frosty2:#004e92;
+//joomla color gradient
+
 
 
 
@@ -28,16 +35,14 @@ html{
 
 body{
     box-sizing: border-box;
-    font-family: sans-serif;
-    //background-image: radial-gradient(rgba(#000033, .4), rgba(#000066, .9));
-    //background-size: cover;
+    font-family: "lato", sans-serif;
     line-height: 1.6;
     font-weight: 400;
-    background-color: rgba($color-black, .95);
-
     min-height: 100vh;
-    //background-image: radial-gradient(rgba(#003333, .4), rgba(#003366, .9));
-    //background-image: radial-gradient(rgba(#bfbfbf, .4), rgba(#4d4d4d, .9));
+    background-image: linear-gradient( to right, rgba($color-frosty1, .6), rgba($color-frosty2, .71)),
+                        url(../img/hills7.jpg);                 
+    background-size: cover;
+    background-position: center;
 }
 
 ::selection{
