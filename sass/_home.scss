@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 10;
+   // z-index: 10;
 }
 
 
@@ -19,10 +19,14 @@
         justify-content: flex-end;
         padding: 3rem;
 
+        @include respond(phone){
+            padding: 1rem 0 0 0;
+        }
+
     }
     &__item{
-        margin-right: 10px;
-        text-transform: uppercase;
+       // margin-right: 10px;
+        text-transform: capitalize;
     }
 
     &__link:link,
@@ -47,6 +51,10 @@
 
         &:active{
             transform: translateY(5px);
+            
+            @include respond(tab-port){
+                transform: translateY(2px);
+            }
         }
     }
     &:hover &__link:not(:hover){
@@ -83,6 +91,15 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            @include respond(tab-port){
+                font-size: 1.8rem;
+                letter-spacing: 1.6rem;
+            }
+            @include respond(phone){
+                font-size: 1.5rem;
+                letter-spacing: 1rem;
+            }
         }
 
         &--sub{   
@@ -97,6 +114,15 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            @include respond(tab-port){
+                font-size: 1.2rem;
+                letter-spacing: 1.6rem;
+            }
+            @include respond(phone){
+                font-size: 1rem;
+                letter-spacing: 1rem;
+            }
         }
     }
 
@@ -145,11 +171,16 @@
         display: flex;
         justify-content: space-around;
         padding: 2rem;
+
+        @include respond(tab-port){
+            padding: 1rem;
+        }
     }
     
     &__item{
         text-transform: capitalize;
     }
+
     &__link:link,
     &__link:visited{
         font-size: 1.5rem;
@@ -163,19 +194,24 @@
         justify-content: center;
         align-items: center;
         transition: all .4s;
+        border-radius: .5rem;
 
         &:hover{
             transform: scale(1.1) translateY(-2px);
-            text-shadow: 0 2rem 4rem $color-white;
+            box-shadow: 0 1rem 3rem rgba($color-black, .3);
         }  
         
         &:active{
             transform: translateY(5px);
+
+            @include respond(tab-port){
+                transform: translateY(2px);
+            }
         } 
     }
 
     &:hover &__link:not(:hover){
-        transform: scale(.7);
+        transform: scale(.8);
     }
 
     &__icon{

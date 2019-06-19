@@ -1,3 +1,14 @@
+/*
+0 - 600 px:     Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal desktop that our styles apply to
+1800px +"       Big desktops
+*/
+/*  @mixin  respond-phone {
+    @media only screen and (max-width:37.5em) { @content };
+}
+*/
 * {
   padding: 0;
   margin: 0; }
@@ -9,6 +20,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 175em) {
+    html {
+      font-size: 62.5%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -16,7 +36,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   min-height: 100vh;
-  background-image: linear-gradient(to right, rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 0.9)), url(../img/hills7.jpg);
+  background-image: linear-gradient(to right, rgba(0, 4, 40, 0.76), rgba(0, 78, 146, 0.88)), url(../img/hills7.jpg);
   background-size: cover;
   background-position: center; }
 
@@ -61,8 +81,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  z-index: 10; }
+  justify-content: space-between; }
 
 /**********navigation****************/
 .navigation {
@@ -72,9 +91,11 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 3rem; }
+    @media screen and (max-width: 37.5em) {
+      .navigation__list {
+        padding: 1rem 0 0 0; } }
   .navigation__item {
-    margin-right: 10px;
-    text-transform: uppercase; }
+    text-transform: capitalize; }
   .navigation__link:link, .navigation__link:visited {
     padding: 1rem 2rem;
     font-size: 1.8rem;
@@ -93,6 +114,9 @@ body {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
     .navigation__link:link:active, .navigation__link:visited:active {
       transform: translateY(5px); }
+      @media only screen and (max-width: 56.25em) {
+        .navigation__link:link:active, .navigation__link:visited:active {
+          transform: translateY(2px); } }
   .navigation:hover .navigation__link:not(:hover) {
     transform: scale(0.8); }
 
@@ -117,6 +141,14 @@ body {
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent; }
+      @media only screen and (max-width: 56.25em) {
+        .text-box__text--main {
+          font-size: 1.8rem;
+          letter-spacing: 1.6rem; } }
+      @media screen and (max-width: 37.5em) {
+        .text-box__text--main {
+          font-size: 1.5rem;
+          letter-spacing: 1rem; } }
     .text-box__text--sub {
       font-size: 1.8rem;
       font-weight: 700;
@@ -128,6 +160,14 @@ body {
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent; }
+      @media only screen and (max-width: 56.25em) {
+        .text-box__text--sub {
+          font-size: 1.2rem;
+          letter-spacing: 1.6rem; } }
+      @media screen and (max-width: 37.5em) {
+        .text-box__text--sub {
+          font-size: 1rem;
+          letter-spacing: 1rem; } }
   .text-box__location {
     height: 50%;
     text-align: center;
@@ -157,6 +197,9 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .social__list {
+      padding: 1rem; } }
 
 .social__item {
   text-transform: capitalize; }
@@ -172,15 +215,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all .4s; }
+  transition: all .4s;
+  border-radius: .5rem; }
   .social__link:link:hover, .social__link:visited:hover {
     transform: scale(1.1) translateY(-2px);
-    text-shadow: 0 2rem 4rem #f2f2f2; }
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
   .social__link:link:active, .social__link:visited:active {
     transform: translateY(5px); }
+    @media only screen and (max-width: 56.25em) {
+      .social__link:link:active, .social__link:visited:active {
+        transform: translateY(2px); } }
 
 .social:hover .social__link:not(:hover) {
-  transform: scale(0.7); }
+  transform: scale(0.8); }
 
 .social__icon {
   height: 2rem;
