@@ -26,8 +26,12 @@
         @media only screen and (max-width: 75em){ @content };
     }
 
+    @if $breakpoint == desktop{
+        @media only screen and (min-width:75em){ @content };
+    }
+
     @if $breakpoint ==big-desktop{
-        @media only screen and (max-width: 175em){ @content };
+        @media only screen and (min-width: 175em){ @content };
     }
     
 }
