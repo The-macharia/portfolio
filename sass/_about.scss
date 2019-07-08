@@ -42,7 +42,6 @@
     }
 
     &__image{
-        float: left;
         align-self: center;
         // -webkit-shape-outside: circle(39%);
         // shape-outside: circle(39%);
@@ -119,6 +118,7 @@
         border: none;
         cursor: pointer;
         transition: all .2s ease-in-out;
+        background-color: rgba(rgb(203, 230, 241), .9);
         color: #003300;
 
         &::after{
@@ -130,7 +130,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: $color-white;
+            background-color: #99CCFF;
             border-radius: 50rem;
             transition: all .4s;
         }
