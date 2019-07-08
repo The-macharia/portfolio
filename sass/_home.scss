@@ -171,7 +171,8 @@
     &__list{
         list-style: none;
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
         padding: 2rem;
 
         @include respond(tab-port){
@@ -181,6 +182,12 @@
     
     &__item{
         text-transform: capitalize;
+
+        &:not(:last-child){margin-right: 10rem;
+            @include respond(phone){
+                margin-right: 5rem;
+            }
+        }
     }
 
     &__link:link,
