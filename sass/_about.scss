@@ -12,7 +12,7 @@
     }
 
     &__heading{
-        font-weight: lighter;
+        font-weight: bold;
         text-align: center;
         text-transform: capitalize;
         font-size: 5rem;
@@ -105,7 +105,7 @@
     }
 }
 
-.btn{
+.cta{
      margin-top: 5rem;
      align-self: flex-end;
      position: relative;

@@ -3,6 +3,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+
+    @include respond(phone){
+        height: max-content;
+    }
 }
 
 
@@ -10,7 +15,6 @@
 /**********navigation****************/
 .navigation{
     color: white;
-
     &__list{
         list-style: none;
         display: flex;
@@ -23,7 +27,6 @@
 
     }
     &__item{
-       // margin-right: 10px;
         text-transform: capitalize;
     }
 
