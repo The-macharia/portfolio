@@ -193,9 +193,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: relative; }
-  @media screen and (max-width: 37.5em) {
-    .container {
-      height: max-content; } }
 
 /**********navigation****************/
 .navigation {
@@ -365,10 +362,14 @@ body {
 .social__text {
   margin-top: .7rem; }
 
+@media screen and (max-width: 37.5em) {
+  .cont {
+    height: max-content; } }
+
 .project {
   display: flex;
   flex: 0 0 100%;
-  height: 100vh;
+  height: auto;
   padding: 1rem 2rem;
   justify-content: space-around; }
   @media only screen and (max-width: 56.25em) {
@@ -391,7 +392,7 @@ body {
     border-radius: 1rem;
     transition: all .3s;
     background-color: rgba(0, 51, 51, 0.4);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.9); }
     .project__languages:not(:last-child) {
       margin-bottom: 2rem; }
     .project__languages:hover {
@@ -410,7 +411,10 @@ body {
   .project__skills-text {
     color: greenyellow;
     margin-bottom: .8rem;
-    font-size: 1rem; }
+    font-size: 1.4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .project__skills-text {
+        font-size: 1rem; } }
   .project__outer-div {
     display: block;
     height: 1rem;
@@ -435,8 +439,8 @@ body {
     margin-top: 2rem;
     padding: 1rem;
     background-color: rgba(0, 51, 51, 0.5);
-    position: relative;
-    box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+    height: auto; }
     .project__content:not(:last-child) {
       margin-bottom: 1.5rem; }
     @media only screen and (max-width: 75em) {
@@ -448,7 +452,7 @@ body {
         flex-wrap: nowrap;
         transform: skewX(0deg);
         width: 102%;
-        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.7);
         border-radius: .6rem; } }
   .project__image {
     clip-path: circle(40% at 50% 50%);
@@ -486,7 +490,8 @@ body {
   .project__text {
     font-size: 1.5rem;
     color: #99CCFF;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    line-height: 1.3; }
     @media screen and (max-width: 37.5em) {
       .project__text {
         display: flex;
