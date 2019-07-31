@@ -7,7 +7,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/pawn1.png">
-   <!-- <script src='main.js'></script> -->
+   <script src='main.js'></script> 
 
     <title>Eric | Developer</title>
 
@@ -102,21 +102,25 @@
                     </div>
                     <div class="project__external">
                         <div class="project__source">
+                            <a href="https://github.com/The-macharia/FashionMnist" target="_blank">
                             <button class="project__btn ">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
                                 <span>source</span>
                             </button>
+                            </a>
                         </div>
 
                         <div class="project__source">
+                            <a href="">
                             <button class="project__btn">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
-                                <span>demo</span>
+                                <span id="demo" >demo</span>
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -134,21 +138,25 @@
                     </div>
                     <div class="project__external">
                         <div class="project__source">
+                            <a href="https://github.com/The-macharia/cifar10-image-classifier" target="_blank">
                             <button class="project__btn ">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
                                 <span>source</span>
                             </button>
+                            </a>
                         </div>
 
                         <div class="project__source">
+                            <a href="">
                             <button class="project__btn">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
-                                <span>demo</span>
+                                <span id="demo" >demo</span>
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -164,21 +172,25 @@
                     </div>
                     <div class="project__external">
                         <div class="project__source">
+                            <a href="https://github.com/The-macharia/portfolio" target="_blank">
                             <button class="project__btn ">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
                                 <span>source</span>
                             </button>
+                            </a>
                         </div>
 
                         <div class="project__source">
+                            <a href="">
                             <button class="project__btn">
                                 <svg class="project__icon">
                                     <use xlink:href = "img/sprite.svg#icon-star"></use>
                                 </svg>
-                                <span>demo</span>
+                                <span id="demo" >demo</span>
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -187,5 +199,11 @@
             
         </div>
     </div>
+
+    <script>
+            document.getElementById("demo").addEventListener("click", function() {
+              alert("Ouch! Still working on that 🙋");
+            });
+    </script>
 </body>
 </html>

@@ -362,6 +362,9 @@ body {
 .social__text {
   margin-top: .7rem; }
 
+a {
+  text-decoration: none; }
+
 @media screen and (max-width: 37.5em) {
   .cont {
     height: max-content; } }
@@ -488,6 +491,7 @@ body {
       .project__heading {
         margin-bottom: .8rem; } }
   .project__text {
+    font-family: sans-serif;
     font-size: 1.5rem;
     color: #99CCFF;
     backface-visibility: hidden;
